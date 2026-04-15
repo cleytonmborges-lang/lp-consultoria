@@ -1,0 +1,20 @@
+{
+  "name": "video-engine",
+  "version": "1.0.0",
+  "description": "Motor de renderizacao de video com Remotion para LP Consultoria",
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.0",
+    "@remotion/three": "4.0.0",
+    "@types/three": "^0.162.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remotion": "4.0.0",
+    "three": "^0.162.0"
+  },
+  "main": "src/index.ts"
+}

@@ -1,0 +1,13 @@
+# Dependências
+video-engine/node_modules/
+node_modules/
+
+# Build outputs
+video-engine/out/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Stitch (ferramenta de design interno)
+.stitch/
