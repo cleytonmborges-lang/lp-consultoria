@@ -1,4 +1,4 @@
-# LP CONSULTORIA — Direcionamento Estratégico
+# LP CONSULTORIA | Direcionamento Estratégico
 
 Landing page profissional para consultoria de Direcionamento Estratégico em Vida e Negócios.
 
@@ -44,4 +44,4 @@ lp-consultoria/
 
 ---
 
-© 2024 Cleyton Borges — Todos os direitos reservados.
+© 2024 Cleyton Borges. Todos os direitos reservados.
