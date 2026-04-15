@@ -1,0 +1,32 @@
+{
+  "style": "authority_break",
+  "duration": 14,
+  "platform": "instagram_reels",
+  "scenes": [
+    {
+      "type": "hook",
+      "text": "Você ainda acha que precisa de 500k no banco pra lucrar com obras?",
+      "duration": 2
+    },
+    {
+      "type": "belief_break",
+      "text": "Mentiram pra você. O segredo do lucro real está no dinheiro do banco, não no seu.",
+      "duration": 3
+    },
+    {
+      "type": "opportunity",
+      "text": "Na minha Consultoria Estratégica, eu te ensino a escalar construções usando capital da Caixa.",
+      "duration": 4
+    },
+    {
+      "type": "benefit",
+      "text": "Lucro máximo com risco mínimo para seu patrimônio.",
+      "duration": 3
+    },
+    {
+      "type": "cta",
+      "text": "Pare de queimar seu próprio dinheiro. Clique e agende seu diagnóstico agora.",
+      "duration": 2
+    }
+  ]
+}

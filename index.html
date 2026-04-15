@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIRECIONAMENTO ESTRATÉGICO | Vida e Negócios</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#f2f4ff",
+                        "on-tertiary-fixed": "#001d35",
+                        "surface-dim": "#131313",
+                        "secondary-fixed-dim": "#adc7ff",
+                        "outline": "#a98a7d",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "on-surface": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "secondary-container": "#026be0",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#ffb693",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffdbcc",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-container": "#003357",
+                        "background": "#131313",
+                        "on-secondary-fixed-variant": "#004493",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#572000",
+                        "primary": "#ffb693",
+                        "tertiary-fixed": "#d0e4ff",
+                        "on-surface-variant": "#e2bfb0",
+                        "on-primary": "#561f00",
+                        "on-secondary-fixed": "#001a41",
+                        "on-secondary": "#002e68",
+                        "on-tertiary": "#003257",
+                        "inverse-primary": "#a04100",
+                        "secondary-fixed": "#d8e2ff",
+                        "primary-container": "#ff6b00",
+                        "surface-tint": "#ffb693",
+                        "tertiary": "#9ccaff",
+                        "tertiary-container": "#059eff",
+                        "surface-variant": "#353534",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "surface-container-highest": "#353534",
+                        "surface": "#131313",
+                        "secondary": "#adc7ff",
+                        "on-primary-fixed": "#351000",
+                        "outline-variant": "#5a4136",
+                        "surface-container": "#201f1f",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#00497b",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-on-surface": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .blueprint-grid {
+            background-image: radial-gradient(circle, #5a4136 0.5px, transparent 0.5px);
+            background-size: 32px 32px;
+            opacity: 0.15;
+        }
+
+        .monolith-shadow {
+            box-shadow: 0 48px 100px -20px rgba(0, 0, 0, 0.8);
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full">
+        <div class="text-xl font-bold tracking-tighter text-[#FFB693] font-headline uppercase">DIRECIONAMENTO
+            ESTRATÉGICO</div>
+        <div class="hidden md:flex gap-8 items-center">
+            <a href="#"
+                class="font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem] text-[#FFB693] pb-1 transition-colors duration-300">PILARES</a>
+            <a href="#"
+                class="font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem] text-[#E2BFB0] hover:text-[#ADC7FF] transition-colors duration-300">MÉTODO</a>
+            <a href="#"
+                class="font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem] text-[#E2BFB0] hover:text-[#ADC7FF] transition-colors duration-300">PARA
+                QUEM</a>
+            <a href="#"
+                class="font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem] text-[#E2BFB0] hover:text-[#ADC7FF] transition-colors duration-300">FAQ</a>
+        </div>
+        <button
+            class="bg-primary-container text-on-primary-container font-label text-[0.75rem] font-bold tracking-wider px-6 py-2.5 rounded-sm uppercase transition-transform active:scale-95 duration-150">AGENDE
+            UM HORÁRIO</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 blueprint-grid z-0"></div>
+        <div class="container mx-auto px-8 grid md:grid-cols-12 gap-12 relative z-10">
+            <div class="md:col-span-8">
+                <span class="font-label text-primary text-[0.75rem] uppercase tracking-[0.2em] mb-6 block">01 /
+                    ENGENHEIRO CIVIL & INFOPRODUTOR</span>
+                <h1
+                    class="font-headline text-[3.5rem] leading-[1.1] font-bold text-on-surface tracking-tighter mb-8 max-w-4xl">
+                    1 hora pode economizar anos de erro.
+                </h1>
+                <p class="text-on-surface-variant text-xl leading-relaxed max-w-2xl mb-12">
+                    Um diagnóstico personalizado, direto e sem enrolação. Sessão única de 1h30 para você sair com
+                    clareza total sobre o próximo passo — na construção, no negócio ou na carreira. Sem mentoria
+                    contínua. Sem conteúdo genérico. Só o que você precisa ouvir.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <button
+                        class="bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary-container px-10 py-5 rounded-sm font-label font-black uppercase tracking-widest text-sm transition-all duration-300">
+                        Quero meu direcionamento
+                    </button>
+                    <div class="flex items-center gap-3 text-secondary">
+                        <span class="material-symbols-outlined" data-icon="verified">verified</span>
+                        <span class="text-sm font-label uppercase tracking-widest">Acompanhamento Tático Pessoal</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 relative hidden md:block">
+                <div
+                    class="absolute -top-20 -right-20 w-[140%] h-[140%] bg-secondary-container/10 blur-[120px] rounded-full">
+                </div>
+                <div class="relative bg-surface-container-low aspect-[3/4] rounded-sm overflow-hidden monolith-shadow">
+                    <!-- Note: In a real deploy, substitute with professional author photo -->
+                    <img src="img/eu.webp" alt="Mentoria" class="w-full h-full object-cover"
+                        data-alt="Professional working focused" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points (Asymmetric Layout) -->
+    <section class="py-48 bg-surface-container-lowest">
+        <div class="container mx-auto px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div
+                    class="md:mt-12 bg-surface-container-low p-10 rounded-sm transition-transform hover:-translate-y-2 duration-500">
+                    <span class="font-label text-[0.65rem] text-primary tracking-widest mb-4 block">OBSTÁCULO 01</span>
+                    <h3 class="font-headline text-lg font-bold mb-4">"Estagnação Profissional"</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">A falta de clareza paralisa processos e
+                        impede que você construa equity real na sua carreira e vida.</p>
+                </div>
+
+                <div
+                    class="bg-surface-container-highest p-10 rounded-sm transition-transform hover:-translate-y-2 duration-500">
+                    <span class="font-label text-[0.65rem] text-secondary tracking-widest mb-4 block">OBSTÁCULO
+                        02</span>
+                    <h3 class="font-headline text-lg font-bold mb-4">"Falta de Retorno"</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Muito esforço e pouca recompensa.
+                        Trabalhar focado apenas no operacional mata sua visão estratégica futura.</p>
+                </div>
+
+                <div
+                    class="md:mt-24 bg-surface-container-low p-10 rounded-sm transition-transform hover:-translate-y-2 duration-500">
+                    <span class="font-label text-[0.65rem] text-primary tracking-widest mb-4 block">OBSTÁCULO 03</span>
+                    <h3 class="font-headline text-lg font-bold mb-4">"Decisões no Escuro"</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">O medo de errar a próxima grande jogada
+                        custa anos de economia, noites de sono e muita paz mental.</p>
+                </div>
+
+                <div
+                    class="md:mt-8 bg-surface-container-highest p-10 rounded-sm transition-transform hover:-translate-y-2 duration-500">
+                    <span class="font-label text-[0.65rem] text-secondary tracking-widest mb-4 block">OBSTÁCULO
+                        04</span>
+                    <h3 class="font-headline text-lg font-bold mb-4">"Falta de Tempo Real"</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Ter uma agenda cheia de reuniões não
+                        significa produtividade ou direção. Precisamos limpar seu caminho urgentemente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Belief Break -->
+    <section class="py-48 bg-surface relative overflow-hidden flex items-center justify-center">
+        <!-- Background Decorative Text -->
+        <h2
+            class="absolute font-headline text-[5rem] md:text-[12rem] font-black text-on-surface/5 leading-none tracking-tighter select-none uppercase z-0 pointer-events-none">
+            STRATEGY
+        </h2>
+
+        <div class="container mx-auto px-8 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <p class="font-headline text-2xl md:text-5xl font-light text-on-surface leading-tight">
+                    O que te paralisa não é a <span class="text-secondary font-bold">falta de esforço</span>.<br>
+                    É tomar decisão <span class="text-primary-container font-black italic">sem diagnóstico. Sem clareza.
+                        Sem direção.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- O que NÃO é -->
+    <section class="py-32 bg-surface-container-low">
+        <div class="container mx-auto px-8 max-w-5xl">
+            <div class="text-center mb-16">
+                <span class="font-label text-primary text-[0.75rem] uppercase tracking-[0.3em] mb-4 block">ANTES DE
+                    AVANÇAR</span>
+                <h2 class="font-headline text-3xl font-bold uppercase tracking-widest">Isso NÃO é para você se...</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-surface-container-highest p-8 rounded-sm border-l-2 border-outline-variant">
+                    <span class="material-symbols-outlined text-on-surface-variant mb-4 block"
+                        data-icon="close">close</span>
+                    <h4 class="font-headline font-bold text-base mb-2 text-on-surface-variant">Você quer mentoria
+                        contínua</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Nossa sessão é única e focada. Não existe
+                        pacote mensal nem acompanhamento prolongado.</p>
+                </div>
+                <div class="bg-surface-container-highest p-8 rounded-sm border-l-2 border-outline-variant">
+                    <span class="material-symbols-outlined text-on-surface-variant mb-4 block"
+                        data-icon="close">close</span>
+                    <h4 class="font-headline font-bold text-base mb-2 text-on-surface-variant">Você busca conteúdo
+                        genérico</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Aqui você recebe diagnóstico 100%
+                        personalizado para o seu cenário específico, não templates ou cursos.</p>
+                </div>
+                <div class="bg-surface-container-highest p-8 rounded-sm border-l-2 border-outline-variant">
+                    <span class="material-symbols-outlined text-on-surface-variant mb-4 block"
+                        data-icon="close">close</span>
+                    <h4 class="font-headline font-bold text-base mb-2 text-on-surface-variant">Você quer respostas
+                        prontas</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">O direcionamento exige que você traga seu
+                        cenário real. O trabalho começa na honestidade do diagnóstico.</p>
+                </div>
+            </div>
+            <div class="mt-12 p-8 bg-primary-container/10 rounded-sm text-center">
+                <p class="font-headline text-lg font-bold text-primary">Mas se você precisa de clareza agora para tomar
+                    a decisão certa — isso foi feito para você.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultoria Explanation -->
+    <section class="py-48 bg-surface-container-lowest">
+        <div class="container mx-auto px-8">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="font-headline text-3xl font-bold mb-12 flex items-center gap-4">
+                        <span class="w-12 h-1 bg-surface-container-highest"></span>
+                        A ESTRUTURA DO DIRECIONAMENTO
+                    </h2>
+
+                    <ul class="space-y-8">
+                        <li class="flex gap-6">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-surface-container-highest flex items-center justify-center rounded-sm">
+                                <span class="material-symbols-outlined text-primary"
+                                    data-icon="analytics">analytics</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-lg mb-2">Análise de Cenário Atual</h4>
+                                <p class="text-on-surface-variant text-sm">Avaliação nua e crua da sua vida e negócios
+                                    no momento presente, sem ilusões.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-6">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-surface-container-highest flex items-center justify-center rounded-sm">
+                                <span class="material-symbols-outlined text-secondary"
+                                    data-icon="account_balance">account_balance</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-lg mb-2">Identificação de Gargalos</h4>
+                                <p class="text-on-surface-variant text-sm">Descobrir exatamente onde você está deixando
+                                    capital, tempo e saúde mental na mesa.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-6">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-surface-container-highest flex items-center justify-center rounded-sm">
+                                <span class="material-symbols-outlined text-primary" data-icon="map">map</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-lg mb-2">Plano de Rota</h4>
+                                <p class="text-on-surface-variant text-sm">O mapa de navegação objetivo: o que você
+                                    precisa fazer amanhã às 8 da manhã.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-6">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-surface-container-highest flex items-center justify-center rounded-sm">
+                                <span class="material-symbols-outlined text-secondary"
+                                    data-icon="check_circle">check_circle</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-lg mb-2">Viabilidade Prática</h4>
+                                <p class="text-on-surface-variant text-sm">Ajustar os planos de expansão com a sua
+                                    realidade atual de capital financeiro e energia vital.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="relative">
+                    <img src="img/sessao-exclusiva.png" alt="Sessão Exclusiva de Consultoria Estratégica"
+                        class="rounded-sm monolith-shadow w-full object-cover"
+                        data-alt="Close up of detailed work and decision making environment" />
+
+                    <div class="absolute -bottom-10 -left-10 bg-primary-container p-10 monolith-shadow rounded-sm">
+                        <span class="block font-headline text-5xl font-black text-on-primary-container">1h30</span>
+                        <span class="block font-label text-xs tracking-widest text-on-primary-container mt-2">SESSÃO
+                            EXCLUSIVA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="py-48 bg-surface-container-low">
+        <div class="container mx-auto px-8 max-w-5xl">
+            <div class="text-center mb-20">
+                <span class="font-label text-secondary text-[0.75rem] uppercase tracking-[0.3em] mb-4 block">FOCO
+                    TÁTICO</span>
+                <h2 class="font-headline text-3xl font-bold uppercase tracking-widest">TÓPICOS DE DIRECIONAMENTO</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-x-16 gap-y-6">
+                <!-- Topic 1 -->
+                <div
+                    class="flex items-start gap-4 p-6 bg-surface-container-highest rounded-sm group transition-colors hover:bg-surface-bright">
+                    <span class="material-symbols-outlined text-primary mt-1"
+                        data-icon="real_estate_agent">real_estate_agent</span>
+                    <div>
+                        <h4 class="font-headline font-bold text-lg mb-1 group-hover:text-primary transition-colors">
+                            Construção Financiada para Venda</h4>
+                        <p class="text-on-surface-variant text-sm">Otimização de lucro e estruturação de crédito para
+                            giro rápido.</p>
+                    </div>
+                </div>
+
+                <!-- Topic 2 -->
+                <div
+                    class="flex items-start gap-4 p-6 bg-surface-container-highest rounded-sm group transition-colors hover:bg-surface-bright">
+                    <span class="material-symbols-outlined text-secondary mt-1" data-icon="foundation">foundation</span>
+                    <div>
+                        <h4 class="font-headline font-bold text-lg mb-1 group-hover:text-secondary transition-colors">
+                            Construção da Casa Própria</h4>
+                        <p class="text-on-surface-variant text-sm">Do terreno à entrega das chaves sem estourar o
+                            orçamento.</p>
+                    </div>
+                </div>
+
+                <!-- Topic 3 -->
+                <div
+                    class="flex items-start gap-4 p-6 bg-surface-container-highest rounded-sm group transition-colors hover:bg-surface-bright">
+                    <span class="material-symbols-outlined text-primary mt-1" data-icon="campaign">campaign</span>
+                    <div>
+                        <h4 class="font-headline font-bold text-lg mb-1 group-hover:text-primary transition-colors">
+                            Posicionamento no Instagram</h4>
+                        <p class="text-on-surface-variant text-sm">Como construir audiência qualificada e vender com
+                            consistência.</p>
+                    </div>
+                </div>
+
+                <!-- Topic 4 -->
+                <div
+                    class="flex items-start gap-4 p-6 bg-surface-container-highest rounded-sm group transition-colors hover:bg-surface-bright">
+                    <span class="material-symbols-outlined text-secondary mt-1"
+                        data-icon="inventory_2">inventory_2</span>
+                    <div>
+                        <h4 class="font-headline font-bold text-lg mb-1 group-hover:text-secondary transition-colors">
+                            Criação de Produtos Digitais</h4>
+                        <p class="text-on-surface-variant text-sm">Transforme a expertise corporativa em infoprodutos de
+                            alto valor.</p>
+                    </div>
+                </div>
+
+                <!-- Topic 5 -->
+                <div
+                    class="flex items-start gap-4 p-6 bg-surface-container-highest rounded-sm group transition-colors hover:bg-surface-bright">
+                    <span class="material-symbols-outlined text-primary mt-1"
+                        data-icon="account_tree">account_tree</span>
+                    <div>
+                        <h4 class="font-headline font-bold text-lg mb-1 group-hover:text-primary transition-colors">
+                            Modelos de Negócio Imobiliário</h4>
+                        <p class="text-on-surface-variant text-sm">Direcionamento claro de qual rota seguir considerando
+                            seu capital hoje.</p>
+                    </div>
+                </div>
+
+                <!-- Topic 6 -->
+                <div
+                    class="flex items-start gap-4 p-6 bg-surface-container-highest rounded-sm group transition-colors hover:bg-surface-bright">
+                    <span class="material-symbols-outlined text-secondary mt-1" data-icon="vpn_key">vpn_key</span>
+                    <div>
+                        <h4 class="font-headline font-bold text-lg mb-1 group-hover:text-secondary transition-colors">
+                            Alugar ou Vender</h4>
+                        <p class="text-on-surface-variant text-sm">Matemática financeira aplicada rigorosamente à sua
+                            estratégia patrimonial.</p>
+                    </div>
+                </div>
+
+                <!-- Topic 7 (Span 2) -->
+                <div
+                    class="md:col-span-2 flex items-center justify-center gap-4 p-8 bg-surface-container-highest rounded-sm">
+                    <span class="material-symbols-outlined text-on-surface-variant"
+                        data-icon="add_circle">add_circle</span>
+                    <span class="font-headline font-bold text-lg text-on-surface-variant">E muitos outros desafios
+                        executivos e de escala.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority Section -->
+    <section class="py-48 bg-surface">
+        <div class="container mx-auto px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <span class="font-label text-secondary text-[0.75rem] uppercase tracking-widest mb-4 block">QUEM
+                        CONDUZ A SESSÃO</span>
+                    <h2 class="font-headline text-4xl font-bold mb-2">Engenheiro Civil.<br>Infoprodutor.</h2>
+                    <p class="text-primary font-label text-sm uppercase tracking-widest mb-6">Especialista em Construção
+                        Financiada — Caixa Econômica Federal</p>
+                    <p class="text-on-surface-variant leading-relaxed mb-8 text-lg">
+                        Após anos atuando em obras, crédito imobiliário e construção para venda pela Caixa Econômica
+                        Federal, aprendi que a diferença entre lucrar e perder tudo está num diagnóstico feito antes da
+                        decisão.<br><br>Minha função não é te dar teoria. É te mostrar, em 1h30, exatamente onde estão
+                        seus gargalos, qual o próximo passo certo e o caminho mais rápido para o resultado — seja numa
+                        obra, numa carreira ou num negócio digital.
+                    </p>
+
+                    <div class="flex gap-8">
+                        <div>
+                            <span class="block text-2xl font-black text-primary font-headline">Construção</span>
+                            <span
+                                class="text-[0.65rem] uppercase tracking-widest text-on-surface-variant font-label">Financiada
+                                pela Caixa</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-black text-primary font-headline">1 Sessão</span>
+                            <span
+                                class="text-[0.65rem] uppercase tracking-widest text-on-surface-variant font-label">Clareza
+                                total. Sem enrolação.</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-black text-primary font-headline">100%</span>
+                            <span
+                                class="text-[0.65rem] uppercase tracking-widest text-on-surface-variant font-label">Personalizado
+                                ao seu caso</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 md:order-2 flex justify-center">
+                    <div class="relative w-full max-w-md aspect-square rounded-sm overflow-hidden monolith-shadow">
+                        <img src="img/eu 2.jpg" alt="Retrato do Autor" class="w-full h-full "
+                            data-alt="Professional portrait of a mentor focusing forward, neutral urban background" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Social Proof Section -->
+    <section class="py-24 bg-surface-container-lowest relative overflow-hidden">
+        <div class="absolute inset-0 blueprint-grid opacity-5"></div>
+        <div class="container mx-auto px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+
+                <!-- Text Content -->
+                <div class="order-2 md:order-1">
+                    <span class="font-label text-[0.65rem] uppercase tracking-[0.3em] text-primary mb-4 block">PRESENÇA
+                        DIGITAL</span>
+                    <h2 class="font-headline text-3xl md:text-4xl font-bold mb-6 leading-tight">Uma comunidade que
+                        <span class="text-primary-container">cresce com conteúdo real.</span>
+                    </h2>
+                    <p class="text-on-surface-variant leading-relaxed mb-10 text-base">
+                        No Instagram, compartilho estratégias práticas sobre construção financiada, imóveis e
+                        negócios digitais — o mesmo nível de clareza que você recebe na sessão. Acesse e veja o que
+                        minha audiência está falando.
+                    </p>
+                    <div class="flex flex-wrap gap-8 mb-10">
+                        <div class="text-center">
+                            <span class="block font-headline text-4xl font-black text-primary">+45K</span>
+                            <span
+                                class="block font-label text-[0.6rem] uppercase tracking-widest text-on-surface-variant mt-1">Seguidores</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block font-headline text-4xl font-black text-secondary">+200</span>
+                            <span
+                                class="block font-label text-[0.6rem] uppercase tracking-widest text-on-surface-variant mt-1">Publicações</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block font-headline text-4xl font-black text-primary">100%</span>
+                            <span
+                                class="block font-label text-[0.6rem] uppercase tracking-widest text-on-surface-variant mt-1">Conteúdo
+                                Gratuito</span>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/engcleytonborges/" target="_blank"
+                        class="inline-flex items-center gap-3 bg-gradient-to-r from-[#FF6B00] to-[#FF9A5C] text-[#351000] font-label font-black text-sm uppercase tracking-widest px-8 py-4 rounded-sm hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary-container/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                        Seguir no Instagram
+                    </a>
+                </div>
+
+                <!-- Instagram Banner Image -->
+                <div class="order-1 md:order-2 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-br from-primary-container/20 to-secondary-container/10 blur-2xl rounded-full">
+                        </div>
+                        <img src="img/banner insta.png" alt="Perfil do Instagram com seguidores"
+                            class="relative w-full rounded-xl monolith-shadow object-cover"
+                            style="box-shadow: 0 32px 80px -10px rgba(255,107,0,0.25), 0 0 0 1px rgba(255,107,0,0.1);" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-48 bg-surface-container-lowest relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 blur-[100px] rounded-full -mr-32 -mt-32">
+        </div>
+        <div class="container mx-auto px-8 relative z-10">
+            <div class="text-center mb-20">
+                <span class="font-label text-primary text-[0.75rem] uppercase tracking-[0.3em] mb-4 block">RESULTADOS
+                    REAIS</span>
+                <h2 class="font-headline text-3xl font-bold uppercase tracking-widest">O QUE ACONTECE NA PRÁTICA</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 - Elevated -->
+                <div
+                    class="bg-surface-container-low p-10 rounded-sm monolith-shadow group mb-8 md:mb-0 transition-transform hover:-translate-y-2">
+                    <div class="flex gap-1 mb-6">
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                    </div>
+                    <p class="text-on-surface text-sm leading-relaxed mb-10 italic">"Eu estava patinando em três
+                        negócios diferentes. Em 90 minutos de conversa, cortamos o que era ruído e dobramos a força
+                        naquilo que realmente dava lucro. Visão cirúrgica."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="img/profile-rodrigo.png" alt="Rodrigo Silva" class="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                            <span class="block font-headline font-bold text-sm">Rodrigo Silva</span>
+                            <span
+                                class="block font-label text-[0.6rem] uppercase tracking-widest text-on-surface-variant">Empreendedor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 - Recessed -->
+                <div
+                    class="bg-surface-container-highest p-10 rounded-sm monolith-shadow group mt-8 md:mt-24 transition-transform hover:-translate-y-2">
+                    <div class="flex gap-1 mb-6">
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                    </div>
+                    <p class="text-on-surface text-sm leading-relaxed mb-10 italic">"Sair do operacional e assumir a
+                        estratégia da minha carreira sempre me deu ansiedade. O direcionamento montou as trilhas. Eu
+                        recuperei a direção do meu tempo."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="img/profile-juliana.png" alt="Juliana Mendes"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                            <span class="block font-headline font-bold text-sm">Juliana Mendes</span>
+                            <span
+                                class="block font-label text-[0.6rem] uppercase tracking-widest text-on-surface-variant">Diretora
+                                de Operações</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 - Standard -->
+                <div
+                    class="bg-surface-container-low p-10 rounded-sm monolith-shadow group mt-8 md:mt-12 transition-transform hover:-translate-y-2">
+                    <div class="flex gap-1 mb-6">
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                        <span class="material-symbols-outlined text-primary-container text-sm"
+                            data-icon="star">star</span>
+                    </div>
+                    <p class="text-on-surface text-sm leading-relaxed mb-10 italic">"Clareza absoluta. Saí da reunião
+                        com um PDF detalhado que salvou minha transição de carreira de um desastre iminente provocado
+                        pela falta de planejamento."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="img/profile-carlos.png" alt="Carlos Alberto" class="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                            <span class="block font-headline font-bold text-sm">Carlos Alberto</span>
+                            <span
+                                class="block font-label text-[0.6rem] uppercase tracking-widest text-on-surface-variant">Profissional
+                                Liberal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section class="py-40 bg-surface-container-low relative overflow-hidden">
+        <div class="absolute inset-0 blueprint-grid opacity-5"></div>
+        <div class="container mx-auto px-8 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-20 reveal-on-scroll">
+                <span
+                    class="font-label text-primary text-[0.75rem] uppercase tracking-[0.3em] mb-4 block">PROCESSO</span>
+                <h2 class="font-headline text-3xl font-bold uppercase tracking-widest mb-4">Como Funciona</h2>
+                <p class="text-on-surface-variant text-base">Simples, direto e sem burocracia.</p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto relative">
+
+                <!-- Connecting line (desktop only) -->
+                <div
+                    class="hidden md:block absolute top-[3.25rem] left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-primary-container/20 via-primary-container/60 to-primary-container/20 z-0">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center reveal-on-scroll">
+                    <div class="relative mb-6">
+                        <div
+                            class="w-24 h-24 bg-surface-container-highest rounded-sm flex items-center justify-center monolith-shadow">
+                            <span class="material-symbols-outlined text-primary" style="font-size: 2rem;"
+                                data-icon="shopping_cart_checkout">shopping_cart_checkout</span>
+                        </div>
+                        <span
+                            class="absolute -top-3 -right-3 w-7 h-7 bg-primary-container text-on-primary-container font-headline font-black text-xs rounded-full flex items-center justify-center">1</span>
+                    </div>
+                    <h4 class="font-headline font-bold text-base mb-3">Finalize o Checkout</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Realize o pagamento de forma rápida e
+                        segura. Em poucos cliques, você garante sua vaga.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center reveal-on-scroll">
+                    <div class="relative mb-6">
+                        <div
+                            class="w-24 h-24 bg-surface-container-highest rounded-sm flex items-center justify-center monolith-shadow">
+                            <span class="material-symbols-outlined text-primary" style="font-size: 2rem;"
+                                data-icon="calendar_add_on">calendar_add_on</span>
+                        </div>
+                        <span
+                            class="absolute -top-3 -right-3 w-7 h-7 bg-primary-container text-on-primary-container font-headline font-black text-xs rounded-full flex items-center justify-center">2</span>
+                    </div>
+                    <h4 class="font-headline font-bold text-base mb-3">Agendamento Imediato</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Imediatamente após a confirmação do
+                        pagamento, o link para agendar sua sessão é liberado automaticamente.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center reveal-on-scroll">
+                    <div class="relative mb-6">
+                        <div
+                            class="w-24 h-24 bg-surface-container-highest rounded-sm flex items-center justify-center monolith-shadow">
+                            <span class="material-symbols-outlined text-secondary" style="font-size: 2rem;"
+                                data-icon="schedule">schedule</span>
+                        </div>
+                        <span
+                            class="absolute -top-3 -right-3 w-7 h-7 bg-secondary-container text-on-secondary font-headline font-black text-xs rounded-full flex items-center justify-center">3</span>
+                    </div>
+                    <h4 class="font-headline font-bold text-base mb-3">Escolha seu Horário</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Horários totalmente flexíveis. Você
+                        agenda de acordo com a sua rotina — sem pressão e no seu tempo.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 flex flex-col items-center text-center reveal-on-scroll">
+                    <div class="relative mb-6">
+                        <div
+                            class="w-24 h-24 bg-surface-container-highest rounded-sm flex items-center justify-center monolith-shadow">
+                            <span class="material-symbols-outlined text-primary" style="font-size: 2rem;"
+                                data-icon="target">target</span>
+                        </div>
+                        <span
+                            class="absolute -top-3 -right-3 w-7 h-7 bg-primary-container text-on-primary-container font-headline font-black text-xs rounded-full flex items-center justify-center">4</span>
+                    </div>
+                    <h4 class="font-headline font-bold text-base mb-3">Sessão com Compromisso</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">1h30 de diagnóstico cirúrgico, direto e
+                        sem enrolação. Apenas o que você precisa ouvir para agir.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Offer Card -->
+
+    <section class="py-48 bg-surface relative">
+        <div class="absolute inset-0 blueprint-grid opacity-10"></div>
+        <div class="container mx-auto px-8 relative z-10 flex justify-center">
+            <!-- Removendo bordas e usando background surface-container-highest para contraste monolítico -->
+            <div
+                class="w-full max-w-4xl bg-surface-container-highest p-12 md:p-24 monolith-shadow flex flex-col md:flex-row gap-16 items-center">
+                <div class="flex-1">
+                    <span class="font-label text-primary text-[0.75rem] uppercase tracking-[0.3em] mb-4 block">SESSÃO
+                        ÚNICA — SEM RECORRÊNCIA</span>
+                    <h2 class="font-headline text-4xl font-black mb-3">Consultoria de Direcionamento Estratégico</h2>
+                    <p class="text-on-surface-variant text-sm mb-8 italic">"1 hora pode economizar anos de erro."</p>
+                    <ul class="space-y-4 mb-12">
+                        <li class="flex items-center gap-3 text-on-surface"><span
+                                class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                            Sessão única de ~1h30 via vídeo (sem mensalidade)</li>
+                        <li class="flex items-center gap-3 text-on-surface"><span
+                                class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                            Diagnóstico completo da sua situação real</li>
+                        <li class="flex items-center gap-3 text-on-surface"><span
+                                class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                            Definição do tipo de projeto mais adequado ao seu perfil</li>
+                        <li class="flex items-center gap-3 text-on-surface"><span
+                                class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                            O caminho mais rápido e seguro para o resultado</li>
+                        <li class="flex items-center gap-3 text-on-surface"><span
+                                class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                            Material de apoio tático formatado pós-sessão</li>
+                    </ul>
+                </div>
+
+                <div class="w-full md:w-auto text-center">
+                    <div class="mb-8">
+                        <span class="block text-sm text-on-surface-variant uppercase tracking-widest mb-1">Investimento
+                            Vital</span>
+                        <span class="block text-6xl font-black text-on-surface font-headline">R$ 497</span>
+                        <span class="block text-sm text-on-surface-variant mt-2">ou <strong class="text-primary">12x de
+                                R$ 49,90</strong></span>
+                    </div>
+                    <a href="https://checkout.upag.io/buy/pnSCrjS7FcNqCj8S" target="_blank" rel="noopener noreferrer"
+                        class="block w-full bg-primary-container text-on-primary-container font-label font-black text-sm uppercase tracking-widest py-6 px-12 rounded-sm hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary-container/20 text-center">
+                        Garantir meu lugar
+                    </a>
+                    <p class="mt-4 text-[0.65rem] text-on-surface-variant uppercase tracking-widest">Atendimento
+                        mediante agenda pessoal restrita</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container-lowest w-full py-24 px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-lg font-black text-[#FF6B00] font-headline tracking-tighter uppercase">DIRECIONAMENTO
+            ESTRATÉGICO</div>
+        <p class="font-['Inter'] text-[0.75rem] uppercase tracking-[10%] text-[#5a4136]">© 2024 SEU NOME PROFISSIONAL.
+            TUDO RESERVADO.</p>
+        <div class="flex gap-8">
+            <a href="#"
+                class="font-['Inter'] text-[0.75rem] uppercase tracking-[10%] text-[#5a4136] hover:text-[#ADC7FF] transition-colors">POLÍTICA
+                DE PRIVACIDADE</a>
+            <a href="#"
+                class="font-['Inter'] text-[0.75rem] uppercase tracking-[10%] text-[#5a4136] hover:text-[#ADC7FF] transition-colors">TERMOS</a>
+            <a href="#"
+                class="font-['Inter'] text-[0.75rem] uppercase tracking-[10%] text-[#5a4136] hover:text-[#ADC7FF] transition-colors">CONTATO
+                DIRECIONAL</a>
+        </div>
+    </footer>
+
+    <!-- Scroll Animation Logic -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Select block-level elements that should animate in sequentially
+            const targetSelectors = [
+                'section h2',
+                'section > div.container > div.text-center',
+                '.grid > div',
+                'ul.space-y-8 > li',
+                '.monolith-shadow' // Images or offer card
+            ];
+
+            document.querySelectorAll(targetSelectors.join(', ')).forEach((el) => {
+                // Ignore elements already animated in hero
+                if (el.closest('section').classList.contains('min-h-screen')) return;
+
+                el.classList.add('reveal-on-scroll');
+
+                // Add staggered delays for grid and list items
+                if (el.parentElement.classList.contains('grid') || el.parentElement.tagName === 'UL') {
+                    const siblingIndex = Array.from(el.parentElement.children).indexOf(el);
+                    // Provide a slight stagger delay for each sibling
+                    el.style.transitionDelay = `${siblingIndex * 150}ms`;
+                }
+
+                observer.observe(el);
+            });
+
+            // Animate hero elements immediately with a stagger
+            const heroElements = document.querySelectorAll('.md\\:col-span-8 > *');
+            heroElements.forEach((el, index) => {
+                el.classList.add('reveal-on-scroll');
+                el.style.transitionDelay = `${index * 150}ms`;
+                setTimeout(() => el.classList.add('is-visible'), 100);
+            });
+
+            // Animate the hero image
+            const heroImage = document.querySelector('.min-h-screen .monolith-shadow');
+            if (heroImage) {
+                heroImage.classList.add('reveal-on-scroll');
+                heroImage.style.transitionDelay = `400ms`;
+                setTimeout(() => heroImage.classList.add('is-visible'), 100);
+            }
+        });
+    </script>
+</body>
+
+</html>
